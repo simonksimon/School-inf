@@ -1,3 +1,6 @@
+#after each consonant letter the bird appends a random vowel letter (l ⇒ la or le)
+#after each vowel letter the bird appends two of the same letter (a ⇒ aaa)
+
 a=""
 d=0
 c=""
