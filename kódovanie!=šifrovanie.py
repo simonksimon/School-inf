@@ -8,7 +8,7 @@
 #tento proces spraviť pre kadžý znak v reťazci
 
 #Cézarova šifra (spočíva v posune znakov v zadanom texte vždy o rovnakú zadanú číselnú hodnotu v abecede. Napríklad ak zadáte 'ahoj' a posun zvolíte
-# 1 potom sa všetky znaky v tomto slove posunú práve o jeden znak dopredu čiže vznikne 'bipk'.)
+#1 potom sa všetky znaky v tomto slove posunú práve o jeden znak dopredu čiže vznikne 'bipk'.)
 def Ceasar_encode(zdroj:str,posun:int)->str:
     a=len(zdroj)
     for i in range(a+1):
