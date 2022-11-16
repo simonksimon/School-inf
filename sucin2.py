@@ -10,7 +10,7 @@ i=0
 vstup=""
 while vstup!=",":
     i+=1
-    vstup=(input("Zadaj mi prvok zoznamu. Ak chceš skonšiť, napíš ','. "))
+    vstup=(input("Zadaj mi prvok zoznamu. Ak chceš skončiť, napíš ','. "))
     if vstup!=",":
         zoz.append(vstup)
     if i==100:
