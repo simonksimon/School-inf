@@ -5,7 +5,6 @@ for i in range(10):
 print(vstup)
 p=0
 n=0
-cisla="0123456789"
 for i in range(len(vstup)):
     if (vstup[i] % 2)==0:
         p+=1
