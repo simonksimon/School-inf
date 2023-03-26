@@ -20,7 +20,6 @@ def executor():
     kb=int(b.get())
     kc=int(c.get())
     d=kb**2 - 4*ka*kc
-    t2=""
     if d<0:
         t="Doesn't have a solution within real numbers."
     elif d==0:
