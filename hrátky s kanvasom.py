@@ -11,7 +11,7 @@ def mixer(e):
     zozobj=canvas.find_overlapping(e.x,e.y,e.x+1,e.y+1)
     if 1 in zozobj:
 
-        if canvas.itemcget(o1,"fill")=="greem":
+        if canvas.itemcget(o1,"fill")=="green":
             canvas.itemccongig(o1,fill="cyan")
         #getter na farbu utvaru c1
         #ak je zelena bude cajan, inak green
