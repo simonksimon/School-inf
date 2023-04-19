@@ -1,6 +1,5 @@
 import tkinter as tk
 import PyPDF2
-#from PyPDF2 import PdfFileReader
 from PIL import Image, ImageTk
 from tkinter.filedialog import askopenfile
 
@@ -21,7 +20,8 @@ instructions.grid(columnspan=3, column=0, row=1)
 def open_file():
     file=askopenfile(parent=root,mode="rb",title="Vyberte si súbor",filetype=[("PDF súbor","*.pdf")])
     if file:
-        read_pdf = PyPDF2.PdfFileReader(file)
+        #read_pdf = PyPDF2.PdfFileReader(file)
+        read_pdf = PyPDF2.PdfReader(file)
         page=read_pdf.getPage(0)
         page_content=page.extractText()
 
