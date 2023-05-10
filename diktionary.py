@@ -9,8 +9,8 @@ print(fz["auto"])
 for keys in fz:
     print(fz[keys])
 
-#Zisti, ko¾ko sa v inpute nachádzajú ktoré písmená abecedy (anglickej a lowercase)
-vstup=input("Zadaj mi reazec: ")
+#ZistiÂ, koÂ¾ko sa v inpute nachÃ¡dzajÃº ktorÃ© pÃ­smenÃ¡ abecedy (anglickej a lowercase)
+vstup=input("Zadaj mi reÂazec: ")
 poc={}
 
 for i in vstup:
@@ -22,9 +22,9 @@ for i in vstup:
         #   poc[i]=1
 print[poc]
 
-slov={"item1": 45.5,"item2": 35,"item3": 41.3,"item4": 55,"item5": 24} #du zotriedi a vypísa prvé 3 (bez sorted)
+slov={"item1": 45.5,"item2": 35,"item3": 41.3,"item4": 55,"item5": 24} #du zotriediÂ a vypÃ­saÂ prvÃ© 3 (bez sorted)
 
-#nájs maximálny prvok v dictionary
+#nÃ¡jsÂ maximÃ¡lny prvok v dictionary
 #for j in range(3):
 #    index_max=list(slov.keys())[0]
 #    print(dir(index_max))
