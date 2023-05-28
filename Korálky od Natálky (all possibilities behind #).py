@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import Canvas
 import random
-import math
 
 Width=500
 Height=500
