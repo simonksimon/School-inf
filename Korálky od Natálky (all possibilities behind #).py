@@ -6,7 +6,7 @@ Width=500
 Height=500
 colors = ["pink","yellow","green","blue"]
 count=40
-safety=0
+#safety=0
 size=20
 zise=0-size
 ballnumber=0
@@ -23,7 +23,7 @@ def setup():
 
 def checkit(e):
     global processed,moveable,zise,ballnumber,firstpos,counter,mvdone
-    processed=[]
+    procesed=[]
     zise +=size+5
     zoz=canvas.find_overlapping(e.x,e.y,e.x+1,e.y+1)
     if len(zoz)!=0 and zoz[0] in moveable:
@@ -35,16 +35,16 @@ def checkit(e):
                 counter=0
                 mvdone=False
                 moveit()
-            print("Stalo sa.")
+            #print("Stalo sa.")
 
 def moveit():
-    global processed, safety,zise,zoz,ballnumber,mv1,mv2,firstpos,counter,mvdone
-    safety+=1
-    if safety==100:
-        print("safety overloaded")
-        exit
+    global processed,zise,zoz,ballnumber,mv1,mv2,firstpos,counter,mvdone#,safety
+    #safety+=1
+    #if safety==100:
+        #print("safety overloaded")
+        #exit
     if len(processed)!=0:
-        print(canvas.coords(processed[0]))
+        #print(canvas.coords(processed[0]))
         coor=canvas.coords(processed[0])
         #finalpos=(Width-size,Height-size)
         if mvdone==False:
@@ -52,7 +52,7 @@ def moveit():
             mv1 = (finalpos1[0] - coor[0]) / 20
             mv2 = (finalpos1[1] - coor[1]) / 20
             mvdone=True
-        print("That weird circly thing with some coloring has been moved.")
+        #print("That weird circly thing with some coloring has been moved.")
         if firstpos==False:
             canvas.move(processed[0], mv1, mv2)
             counter += 1
@@ -60,7 +60,7 @@ def moveit():
                 firstpos=True
             canvas.after(5, moveit)
         else:
-            finalpos2=[offs+zise,Height-offs-10]
+      #     finalpos2=[offs+zise,Height-offs-10]
             dy = 0
             if coor[0]<finalpos2[0]:
                 dx=1
