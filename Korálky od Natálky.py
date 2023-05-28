@@ -23,6 +23,7 @@ def setup():
 
 def checkit(e):
     global processed,moveable,zise,ballnumber,firstpos,counter,mvdone
+    canvas.unbind("<Button-1>")
     processed=[]
     zise +=size+5
     zoz=canvas.find_overlapping(e.x,e.y,e.x+1,e.y+1)
@@ -46,7 +47,6 @@ def moveit():
     if len(processed)!=0:
         print(canvas.coords(processed[0]))
         coor=canvas.coords(processed[0])
-        #finalpos=(Width-size,Height-size)
         if mvdone==False:
             finalpos1 = [Width - offs, Height - offs - 10]
             mv1 = (finalpos1[0] - coor[0]) / 20
@@ -72,6 +72,7 @@ def moveit():
             if abs(coor[0] - finalpos2[0]) <= 1:
                 print("Ball done.")
                 ballnumber+=1
+                canvas.bind("<Button-1>", checkit)
                 exit
             else:
                 canvas.after(5, moveit)
