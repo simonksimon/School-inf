@@ -6,7 +6,6 @@ Width=500
 Height=500
 colors = ["pink","yellow","green","blue"]
 count=40
-safety=0
 size=20
 zise=0-size
 ballnumber=0
@@ -38,11 +37,7 @@ def checkit(e):
                 moveit()
 
 def moveit():
-    global processed, safety,zise,zoz,ballnumber,mv1,mv2,firstpos,counter,mvdone
-    safety+=1
-    if safety==100:
-        print("safety overloaded")
-        exit
+    global processed, zise,zoz,ballnumber,mv1,mv2,firstpos,counter,mvdone
     if len(processed)!=0:
         coor=canvas.coords(processed[0])
         if mvdone==False:
