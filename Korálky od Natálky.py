@@ -36,7 +36,6 @@ def checkit(e):
                 counter=0
                 mvdone=False
                 moveit()
-            print("Stalo sa.")
 
 def moveit():
     global processed, safety,zise,zoz,ballnumber,mv1,mv2,firstpos,counter,mvdone
@@ -45,14 +44,12 @@ def moveit():
         print("safety overloaded")
         exit
     if len(processed)!=0:
-        print(canvas.coords(processed[0]))
         coor=canvas.coords(processed[0])
         if mvdone==False:
             finalpos1 = [Width - offs, Height - offs - 10]
             mv1 = (finalpos1[0] - coor[0]) / 20
             mv2 = (finalpos1[1] - coor[1]) / 20
             mvdone=True
-        print("That weird circly thing with some coloring has been moved.")
         if firstpos==False:
             canvas.move(processed[0], mv1, mv2)
             counter += 1
