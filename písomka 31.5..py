@@ -6,7 +6,7 @@ canvas.pack()
 
 a=20
 b=30
-safety=0
+
 
 def lodicka(x, y):
     plachta = random.randint(-3, 3)
@@ -14,7 +14,7 @@ def lodicka(x, y):
     canvas.create_polygon(x-20, y, x+20, y, x+10, y+8, x-10, y+8)
 
 def start(e):
-    global a,b,safety
+    global a,b
     c=0
     y="0"
     for i in range(15):
