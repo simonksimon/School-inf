@@ -19,24 +19,20 @@ def start(e):
     y="0"
     for i in range(15):
         globals()["var_" + str(i)] = a
-    while c<650:
-        safety+=1
-        if safety==1000:
-            print("Safety overheated.")
-            exit
+    for y in range(651):
         b = 30
         for i in range(15):
-            canvas.create_rectangle(1,1,699,649,fill="white")
+            canvas.delete("all")
             canvas.create_line(650, 0, 650, 650, fill="red")
             globals()["var_" + str(i)]+=random.randint(1,10)
             c = globals()["var_" + str(i)]
-            print(c,b)
+            print(i,c,b)
             lodicka(c, b)
-            canvas.after(50)
+            canvas.after(5)
             b+=35
             if c==650 or c>650:
                 y=str(i)
-                exit
+                break
     canvas.create_text(350, 325, fill="darkblue", font="Times 15",text=y+"won.")
 
 for i in range(15):
