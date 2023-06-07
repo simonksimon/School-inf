@@ -12,7 +12,7 @@ hrusiz=10
 hrunum=0
 
 def draw_snake():
-    global head,mv,speed,whole_snake,hruska,hrudot,hrucou,hrunum,ihruskaf
+    global head,mv,speed,whole_snake,hruska,hrucou,hrunum,ihruskaf
     whole_snake=canvas.create_rectangle(head[0],head[1],head[0],head[1],fill="black")
     overlap = canvas.find_overlapping(head[0], head[1], head[0], head[1])
     head[0]+=mv[0]
@@ -46,7 +46,7 @@ def menic(e):
         speed+=10
 
 def hrusky():
-    global ihruskaf,hrunum,whole_snake,hruska,hrudot,hrucou,hrunum,ihruskaf
+    global ihruskaf,hrunum,whole_snake,hruska,hrucou,hrunum,ihruskaf
     if ihruskaf==False:
         hrucou=canvas.create_text(400, 480, fill="darkblue", font="Times 15", text="Odtrhnuté hrušky: "+str(hrunum))
         hruran1=random.randint(10,490)
@@ -54,7 +54,6 @@ def hrusky():
         hruska=canvas.create_oval(hruran1,hruran2,hruran1+hrusiz,hruran2+hrusiz,fill="green")
         ihruskaf = True
         draw_snake()
-        #hrudot = canvas.find_overlapping(head[0], head[1], head[0], head[1])
 
 draw_snake()
 hrusky()
