@@ -22,5 +22,3 @@ for i, line in enumerate(krizovka):
             else: label=tk.Label(root, text=char, relief="solid")
             label.grid(row=i, column=y+max_len-int(data[i].split(' ')[0]))
 root.mainloop()
-
-
